@@ -1,6 +1,6 @@
 
 #### 本服务为经过改造官方的Jenkins镜像而产生的新的集成服务镜像并存放于国内阿里云镜像库中.
-#####先看镜像运行
+##### 先看镜像运行
 ----
 docker run -d -u root --name ci_server \
  --privileged -p 9090:8080 -p 50000:50000 \
@@ -9,7 +9,7 @@ docker run -d -u root --name ci_server \
  -v /usr/bin/docker:/usr/bin/docker \
  registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
  
- **注释:**
+ ##### 注释:
  ----
  **(1) 运行参数解释:**
    * --privileged  以root权限运行
