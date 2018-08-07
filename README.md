@@ -3,8 +3,8 @@
 ##### 先看镜像运行
 ----
 docker run -d -u root --name ci_server \
- --privileged -p 9090:8080 -p 50000:50000 \
- -v /mnt/lcy/dk/jenkins_home1:/var/jenkins_home \
+ --privileged -p 8080:8080 -p 50000:50000 \
+ -v /somedir/jenkins_home:/var/jenkins_home \
  -v /var/run/docker.sock:/var/run/docker.sock \
  -v /usr/bin/docker:/usr/bin/docker \
  registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
@@ -14,7 +14,7 @@ docker run -d -u root --name ci_server \
  **(1) 运行参数解释:**
    * --privileged  以root权限运行
    * -p -p 端口映射    eg:  宿主机端口:容器端口
-   * -v 数据磁盘挂载  eg:宿主机磁盘:容器磁盘
+   * -v 数据磁盘挂载  eg:宿主机磁盘:容器磁盘 /somedir/jenkins_home为需要宿主机挂载的Jenkins数据目录
    * -d 后台运行
    * -u root 以root账号运行容器
      
@@ -27,3 +27,7 @@ docker run -d -u root --name ci_server \
    * svn /usr/bin/svn                        默认svn环境 
    * git /usr/bin/git
    * docker  通过挂载的方式获取宿主机的docker执行命令
+   
+ **(3) 服务访问**
+   * http://ip:9090
+   * 第一次运行设置参考Jenkins运行设置
