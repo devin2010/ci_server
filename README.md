@@ -29,5 +29,4 @@ docker run -d -u root --name ci_server \
    * docker  通过挂载的方式获取宿主机的docker执行命令
    
  **(3) 服务访问**
-   * http://ip:8080
-   * 第一次运行设置参考Jenkins运行设置
+   * jenkins访问:http://ip:8080 (第一次运行设置参考Jenkins运行设置)
