@@ -1,6 +1,6 @@
 
-#### 本服务为经过改造官方的Jenkins镜像而产生的新的集成服务镜像并存放于国内阿里云镜像库中.
-##### 先看镜像运行
+### 本服务为经过改造官方的Jenkins镜像而产生的新的集成服务镜像并存放于国内阿里云镜像库中.
+##### 先看镜像运行:
 ----
 docker run -d -u root --name ci_server \
  --privileged -p 8080:8080 -p 50000:50000 \
@@ -29,5 +29,5 @@ docker run -d -u root --name ci_server \
    * docker  通过挂载的方式获取宿主机的docker执行命令
    
  **(3) 服务访问**
-   * http://ip:9090
+   * http://ip:8080
    * 第一次运行设置参考Jenkins运行设置
