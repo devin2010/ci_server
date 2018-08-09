@@ -20,6 +20,8 @@
    * -v 数据磁盘挂载  eg:宿主机磁盘:容器磁盘 /somedir/jenkins_home为需要宿主机挂载的Jenkins数据目录
    * -d 后台运行
    * -u root 以root账号运行容器
+ **(2) 服务访问:**  
+   * jenkins访问:http://ip:8080 (第一次运行设置参考Jenkins运行设置)
 
 
 
