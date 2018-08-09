@@ -5,7 +5,7 @@ MAINTAINER devin <devin@qq.com>
 COPY jdk-7u79-linux-x64.gz /usr/share/java/jdk-7u79-linux-x64.gz
 RUN cd /usr/share/java/ \
   && tar zxvf jdk-7u79-linux-x64.gz \
-  && rm -f jdk-7u79-linux-x64.gz
+  && rm -f jdk-7u79-linux-x64.gz 
 
 
 #install nodejs
@@ -20,9 +20,9 @@ RUN mkdir -p /usr/share/nodejs /usr/share/nodejs/ref \
   && rm -f ./node-v8.11.3-linux-x64.tar \
   && ln -s /usr/share/nodejs/bin/node /usr/bin/node \
   && ln -s /usr/share/nodejs/bin/npm /usr/bin/npm
+  
 
-
-#install maven
+#install maven 
 ARG MAVEN_VERSION=3.5.4
 ARG USER_HOME_DIR="/root"
 ARG SHA=ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d
@@ -33,9 +33,9 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
   && rm -f /tmp/apache-maven.tar.gz \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
-
 #COPY mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
 #COPY settings-docker.xml /usr/share/maven/ref/
 #ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
