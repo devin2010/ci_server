@@ -37,7 +37,6 @@ docker run -d -u root --name ci_server \
  registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
  
  ##### 注释:
- ----
  **(1) 运行参数解释:**
    * --privileged  以root权限运行
    * -p -p 端口映射    eg:  宿主机端口:容器端口
@@ -67,7 +66,6 @@ docker run -d -u root --name ci_server \
 docker run -u root --name ci_server -e JENKINS_USER_NAME="admin" -e JENKINS_PWD="123456" --privileged -p 8080:8080 -p 50000:000 -p 8181:8181 -v /mnt/lcy/dk/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0
  
  ##### 注释:
- ----
  **(1) 运行参数解释:**
    * --privileged  以root权限运行
    * -p -p 端口映射    eg:  宿主机端口:容器端口
