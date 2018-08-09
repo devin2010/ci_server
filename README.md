@@ -3,7 +3,7 @@
 一: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0
  ----
  ##### 说明:
- 该镜像是基于管网jenkins:2.60.3镜像基数上加入docker依赖组件,以实现容器内操作docker命令.
+ 该镜像是基于管网jenkins:2.60.3镜像基础上加入docker依赖组件,以实现容器内操作docker命令.
  
  ##### 运行:
  docker run -d -u root --name ci_server \
@@ -26,7 +26,7 @@
 二: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
 ----
 ##### 说明:
- 该镜像是基于自制jenkins_dind:1.0镜像基数上加入相关集成环境,以完善Jenkins环境.
+ 该镜像是基于自制jenkins_dind:1.0镜像基础上加入相关集成环境,以完善Jenkins环境.
 
  ##### 运行:
 docker run -d -u root --name ci_server \
