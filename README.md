@@ -1,6 +1,7 @@
 
 ### 本服务为经过改造官方的Jenkins镜像而产生的新的集成服务镜像并存放于国内阿里云镜像库中.
 ##### 先看镜像运行:
+* 一: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0
 ----
 docker run -d -u root --name ci_server \
  --privileged -p 8080:8080 -p 50000:50000 \
