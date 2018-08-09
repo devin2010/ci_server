@@ -1,5 +1,5 @@
 
-### 本服务为经过改造官方的Jenkins镜像而产生的新的集成服务镜像并存放于国内阿里云镜像库中.
+### 本服务为经过改造docker hub的Jenkins官方镜像而成的新的集成服务镜像并存放于国内阿里云镜像库中.
 一: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0
  ----
  ##### 说明:
