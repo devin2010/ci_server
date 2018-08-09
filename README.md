@@ -1,7 +1,35 @@
 
 ### 本服务为经过改造官方的Jenkins镜像而产生的新的集成服务镜像并存放于国内阿里云镜像库中.
 ##### 先看镜像运行:
+一: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0
+ ----
+ ##### 说明:
+ 该镜像是基于管网jenkins:2.60.3镜像基数上加入docker依赖组件,以实现容器内操作docker命令.
+ 
+ ##### 运行:
+ docker run -d -u root --name ci_server \
+ --privileged -p 8080:8080 -p 50000:50000 \
+ -v /somedir/jenkins_home:/var/jenkins_home \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ -v /usr/bin/docker:/usr/bin/docker \
+ registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0
+ 
+ ##### 注释:
+ **(1) 运行参数解释:**
+   * --privileged  以root权限运行
+   * -p -p 端口映射    eg:  宿主机端口:容器端口
+   * -v 数据磁盘挂载  eg:宿主机磁盘:容器磁盘 /somedir/jenkins_home为需要宿主机挂载的Jenkins数据目录
+   * -d 后台运行
+   * -u root 以root账号运行容器
+
+
+
+二: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
 ----
+##### 说明:
+ 该镜像是基于管网jenkins:2.60.3镜像基数上加入docker依赖组件,以实现容器内操作docker命令.
+
+ ##### 运行:
 docker run -d -u root --name ci_server \
  --privileged -p 8080:8080 -p 50000:50000 \
  -v /somedir/jenkins_home:/var/jenkins_home \
