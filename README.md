@@ -77,4 +77,4 @@ docker run -u root -d --name ci_server -e JENKINS_USER_NAME="admin" -e JENKINS_P
    
  **(3) 服务访问**
    * jenkins访问:http://ip:8080 (第一次运行设置参考Jenkins运行设置)  
-   * ci_server二次开发接口地址访问:http://ip:8181/swagger-ui.html
+   * ci_server二次开发接口查看&测试地址:http://ip:8181/swagger-ui.html
