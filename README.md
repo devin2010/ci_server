@@ -64,7 +64,7 @@ docker run -d -u root --name ci_server \
  该镜像是基于自制ci_server:1.0镜像基数上加入Jenkins服务二次开发的接口,为上层应用提供接口服务.
 
  ##### 运行:
-docker run -u root --name ci_server -e JENKINS_USER_NAME="admin" -e JENKINS_PWD="123456" --privileged -p 8080:8080 -p 50000:000 -p 8181:8181 -v /mnt/lcy/dk/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0
+docker run -u root -d --name ci_server -e JENKINS_USER_NAME="admin" -e JENKINS_PWD="123456" --privileged -p 8080:8080 -p 50000:50000 -p 8181:8181 -v /somedir/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0
  
  ##### 注释:
  **(1) 运行参数解释:**
