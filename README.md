@@ -1,6 +1,6 @@
 
 ### 本服务为经过改造docker hub的Jenkins官方镜像而来的集成服务镜像并存放于阿里云镜像库中.
-一: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0
+一: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/jenkins_dind:1.0 (2018-08-05)
  ----
  ##### 说明:
  该镜像是基于管网jenkins:2.60.3镜像基础上加入docker依赖组件,以实现容器内操作docker命令.
@@ -24,7 +24,7 @@
  **(2) 服务访问:**
    * jenkins访问:http://ip:8080 (第一次运行设置参考Jenkins运行设置)
 
-二: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
+二: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0 (2018-08-06)
 ----
 ##### 说明:
  该镜像是基于自制jenkins_dind:1.0镜像基础上加入相关集成环境,以完善Jenkins环境.
@@ -58,7 +58,7 @@ docker run -d -u root --name ci_server \
    * jenkins访问:http://ip:8080 (第一次运行设置参考Jenkins运行设置)
    
    
-三: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0
+三: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0 (update:2018-08-09)
 ----
 ##### 说明:
  该镜像是基于自制ci_server:1.0镜像基数上加入Jenkins服务二次开发的接口,为上层应用提供接口服务.
