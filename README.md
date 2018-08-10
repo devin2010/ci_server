@@ -63,7 +63,7 @@ docker run -u root -d --name ci_server -e JENKINS_USER_NAME="admin" -e JENKINS_P
    * -v 数据磁盘挂载  eg:宿主机磁盘:容器磁盘 /somedir/jenkins_home为需要宿主机挂载的Jenkins数据目录
    * -d 后台运行
    * -u root 以root账号运行容器
-   * -e 环境变量设置 JENKINS_USER_NAME:Jenkins账号 JENKINS_PWD:Jenkins账号密码
+   * -e 环境变量设置 JENKINS_USER_NAME:Jenkins账号 JENKINS_PWD:Jenkins账号密码(不设置时容器内部默认为admin/123456)
      
  
  **(2) 本容器运行后包含环境以及路径:**
