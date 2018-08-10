@@ -58,7 +58,7 @@ docker run -d -u root --name ci_server \
    * jenkins访问:http://ip:8080 (第一次运行设置参考Jenkins运行设置)
    
    
-三: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0 (update:2018-08-09)
+三: 镜像:registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0.0 (2018-08-09)
 ----
 ##### 说明:
  该镜像是基于自制ci_server:1.0镜像基数上加入Jenkins服务二次开发的接口,为上层应用提供接口服务.
