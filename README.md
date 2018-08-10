@@ -25,12 +25,7 @@
  该镜像是基于自制jenkins_dind:1.0镜像基础上加入相关集成环境,以完善Jenkins环境.
 
  ##### 运行:
-docker run -d -u root --name ci_server \
- --privileged -p 8080:8080 -p 50000:50000 \
- -v /somedir/jenkins_home:/var/jenkins_home \
- -v /var/run/docker.sock:/var/run/docker.sock \
- -v /usr/bin/docker:/usr/bin/docker \
- registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
+docker run -d -u root --name ci_server --privileged -p 8080:8080 -p 50000:50000 -v /somedir/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker registry.cn-shenzhen.aliyuncs.com/devin/ci_server:1.0
  
  ##### 注释:
  **(1) 运行参数解释:**
